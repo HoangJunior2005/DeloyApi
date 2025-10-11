@@ -50,7 +50,7 @@ namespace EV_RENTAL_SYSTEM.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
+            
             // Configure User entity
             modelBuilder.Entity<User>(entity =>
             {
@@ -201,6 +201,7 @@ namespace EV_RENTAL_SYSTEM.Data
                 new LicenseType { LicenseTypeId = "B1", TypeName = "B1", Description = "Car up to 9 seats" },
                 new LicenseType { LicenseTypeId = "B2", TypeName = "B2", Description = "Unlimited car" }
             );
+
         }
     }
 }
