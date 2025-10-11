@@ -19,11 +19,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 // Database
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// AutoMapper
-builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
+// Đăng ký DbContext
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Repositories
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
