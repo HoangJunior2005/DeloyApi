@@ -316,7 +316,6 @@ namespace EV_RENTAL_SYSTEM.Controllers
                     });
                 }
 
-	
 				if (createDto.IsBookingForOthers)
 				{
 					if (createDto.RenterLicenseImage == null)

@@ -156,8 +156,6 @@ namespace EV_RENTAL_SYSTEM.Models.DTOs
         [Range(0, double.MaxValue, ErrorMessage = "Phí cọc phải lớn hơn hoặc bằng 0")]
         public decimal? DepositAmount { get; set; }
 
-        [MaxLength(500, ErrorMessage = "Ghi chú không được quá 500 ký tự")]
-     
         public bool IsBookingForOthers { get; set; } = false;
 
         public IFormFile? RenterLicenseImage { get; set; }
