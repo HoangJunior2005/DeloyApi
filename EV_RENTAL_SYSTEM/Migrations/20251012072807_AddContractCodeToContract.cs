@@ -13,10 +13,8 @@ namespace EV_RENTAL_SYSTEM.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_Contract_Order_OrderId",
-                table: "Contract");
-
+            // Note: FK_Contract_Order_OrderId is handled by FixConstraintDeploymentIssue migration
+            
             migrationBuilder.DropForeignKey(
                 name: "FK_License_LicenseType_LicenseTypeId",
                 table: "License");
@@ -397,12 +395,6 @@ namespace EV_RENTAL_SYSTEM.Migrations
                 oldType: "decimal(18,2)",
                 oldNullable: true);
 
-            migrationBuilder.AddColumn<decimal>(
-                name: "Battery",
-                table: "Vehicle",
-                type: "decimal(5,2)",
-                nullable: true);
-
             migrationBuilder.AddColumn<string>(
                 name: "Description",
                 table: "Vehicle",
@@ -412,12 +404,6 @@ namespace EV_RENTAL_SYSTEM.Migrations
 
             migrationBuilder.AddColumn<int>(
                 name: "Model_year",
-                table: "Vehicle",
-                type: "int",
-                nullable: true);
-
-            migrationBuilder.AddColumn<int>(
-                name: "Range_km",
                 table: "Vehicle",
                 type: "int",
                 nullable: true);
@@ -600,13 +586,7 @@ namespace EV_RENTAL_SYSTEM.Migrations
                 maxLength: 255,
                 nullable: true);
 
-            migrationBuilder.AddColumn<string>(
-                name: "Plate_Number",
-                table: "LicensePlate",
-                type: "nvarchar(50)",
-                maxLength: 50,
-                nullable: false,
-                defaultValue: "");
+            // Plate_Number is already added by UpdateLicensePlateStructure migration
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "Registration_date",
@@ -1084,9 +1064,7 @@ namespace EV_RENTAL_SYSTEM.Migrations
                 name: "Model_year",
                 table: "Vehicle");
 
-            migrationBuilder.DropColumn(
-                name: "Range_km",
-                table: "Vehicle");
+            // Range_km is needed for Vehicle, so don't drop it
 
             migrationBuilder.DropColumn(
                 name: "Available_Vehicle",

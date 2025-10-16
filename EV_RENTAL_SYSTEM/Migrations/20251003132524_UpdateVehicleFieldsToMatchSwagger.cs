@@ -18,39 +18,35 @@ namespace EV_RENTAL_SYSTEM.Migrations
             migrationBuilder.AddColumn<decimal>(
                 name: "Battery",
                 table: "Vehicle",
-                type: "decimal(5,2)",
+                type: "numeric(5,2)",
                 nullable: true);
 
-            migrationBuilder.AddColumn<decimal>(
-                name: "Charging_time",
-                table: "Vehicle",
-                type: "decimal(4,1)",
-                nullable: true);
+            // Charging_time is not needed for Vehicle
 
             migrationBuilder.AddColumn<int>(
                 name: "Range_km",
                 table: "Vehicle",
-                type: "int",
+                type: "integer",
                 nullable: true);
 
             migrationBuilder.AddColumn<string>(
                 name: "Status",
                 table: "Vehicle",
-                type: "nvarchar(50)",
+                type: "character varying(50)",
                 maxLength: 50,
                 nullable: true);
 
             migrationBuilder.AddColumn<string>(
                 name: "Vehicle_image",
                 table: "Vehicle",
-                type: "nvarchar(500)",
+                type: "character varying(500)",
                 maxLength: 500,
                 nullable: true);
 
             migrationBuilder.AddColumn<int>(
                 name: "Station_Id",
                 table: "Vehicle",
-                type: "int",
+                type: "integer",
                 nullable: true);
 
             migrationBuilder.CreateIndex(
@@ -81,9 +77,7 @@ namespace EV_RENTAL_SYSTEM.Migrations
                 name: "Battery",
                 table: "Vehicle");
 
-            migrationBuilder.DropColumn(
-                name: "Charging_time",
-                table: "Vehicle");
+            // Charging_time was not added, so no need to drop it
 
             migrationBuilder.DropColumn(
                 name: "Range_km",

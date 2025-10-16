@@ -10,9 +10,8 @@ namespace EV_RENTAL_SYSTEM.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropColumn(
-                name: "Status",
-                table: "Vehicle");
+            // Status column is handled by UpdateVehicleFieldsToMatchSwagger migration
+            // No action needed here
         }
 
         /// <inheritdoc />

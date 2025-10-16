@@ -11,10 +11,15 @@ namespace EV_RENTAL_SYSTEM.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             // Guard against duplicate column when database was created via EnsureCreated
-            migrationBuilder.Sql(@"IF COL_LENGTH('Order', 'Status') IS NULL
-BEGIN
-    ALTER TABLE [Order] ADD [Status] nvarchar(50) NULL;
-END");
+            migrationBuilder.Sql(@"
+                DO $$ 
+                BEGIN
+                    IF NOT EXISTS (SELECT 1 FROM information_schema.columns 
+                                  WHERE table_name = 'Order' AND column_name = 'Status') THEN
+                        ALTER TABLE ""Order"" ADD COLUMN ""Status"" character varying(50) NULL;
+                    END IF;
+                END $$;
+            ");
         }
 
         /// <inheritdoc />

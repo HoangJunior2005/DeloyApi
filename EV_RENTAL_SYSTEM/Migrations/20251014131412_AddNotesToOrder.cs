@@ -29,7 +29,7 @@ namespace EV_RENTAL_SYSTEM.Migrations
             migrationBuilder.AddColumn<string>(
                 name: "Notes",
                 table: "Order",
-                type: "nvarchar(1000)",
+                type: "character varying(1000)",
                 maxLength: 1000,
                 nullable: true);
         }
@@ -44,28 +44,28 @@ namespace EV_RENTAL_SYSTEM.Migrations
             migrationBuilder.AddColumn<bool>(
                 name: "Is_Booking_For_Others",
                 table: "Order",
-                type: "bit",
+                type: "boolean",
                 nullable: false,
                 defaultValue: false);
 
             migrationBuilder.AddColumn<string>(
                 name: "Renter_License_ImageUrl",
                 table: "Order",
-                type: "nvarchar(500)",
+                type: "character varying(500)",
                 maxLength: 500,
                 nullable: true);
 
             migrationBuilder.AddColumn<string>(
                 name: "Renter_Name",
                 table: "Order",
-                type: "nvarchar(100)",
+                type: "character varying(100)",
                 maxLength: 100,
                 nullable: true);
 
             migrationBuilder.AddColumn<string>(
                 name: "Renter_Phone",
                 table: "Order",
-                type: "nvarchar(20)",
+                type: "character varying(20)",
                 maxLength: 20,
                 nullable: true);
         }

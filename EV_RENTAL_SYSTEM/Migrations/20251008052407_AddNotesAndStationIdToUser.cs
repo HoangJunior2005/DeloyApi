@@ -11,17 +11,13 @@ namespace EV_RENTAL_SYSTEM.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "Charging_time",
-                table: "Vehicle");
-
-            migrationBuilder.DropColumn(
                 name: "Vehicle_type",
                 table: "Vehicle");
 
             migrationBuilder.AddColumn<string>(
                 name: "Phone_number",
                 table: "User",
-                type: "nvarchar(20)",
+                type: "character varying(20)",
                 maxLength: 20,
                 nullable: false,
                 defaultValue: "");
@@ -29,14 +25,14 @@ namespace EV_RENTAL_SYSTEM.Migrations
             migrationBuilder.AddColumn<string>(
                 name: "Notes",
                 table: "User",
-                type: "nvarchar(500)",
+                type: "character varying(500)",
                 maxLength: 500,
                 nullable: true);
 
             migrationBuilder.AddColumn<int>(
                 name: "Station_Id",
                 table: "User",
-                type: "int",
+                type: "integer",
                 nullable: true);
 
             migrationBuilder.CreateIndex(
@@ -75,16 +71,10 @@ namespace EV_RENTAL_SYSTEM.Migrations
                 name: "Station_Id",
                 table: "User");
 
-            migrationBuilder.AddColumn<decimal>(
-                name: "Charging_time",
-                table: "Vehicle",
-                type: "decimal(4,1)",
-                nullable: true);
-
             migrationBuilder.AddColumn<string>(
                 name: "Vehicle_type",
                 table: "Vehicle",
-                type: "nvarchar(50)",
+                type: "character varying(50)",
                 maxLength: 50,
                 nullable: true);
         }
