@@ -14,7 +14,7 @@ namespace EV_RENTAL_SYSTEM.Models
         public int OrderId { get; set; }
 
         [MaxLength(50)]
-        [Column("Contract_Code")]
+        [Column("Contract_code")]
         public string? ContractCode { get; set; }
 
         [Column("Created_date")]
