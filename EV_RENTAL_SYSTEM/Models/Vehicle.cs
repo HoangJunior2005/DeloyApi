@@ -8,36 +8,36 @@ namespace EV_RENTAL_SYSTEM.Models
     public class Vehicle
     {
         [Key]
-        [Column("Vehicle_Id")]
+        [Column("vehicle_id")]
         public int VehicleId { get; set; }
 
         [Required]
         [MaxLength(100)]
         public string Model { get; set; } = string.Empty;
 
-        [Column("Model_year")]
+        [Column("model_year")]
         public int? ModelYear { get; set; }
 
-        [Column("Brand_Id")]
+        [Column("brand_id")]
         public int BrandId { get; set; }
 
         [MaxLength(255)]
         public string? Description { get; set; }
 
-        [Column("Price_per_day", TypeName = "decimal(10,2)")]
+        [Column("price_per_day", TypeName = "decimal(10,2)")]
         public decimal? PricePerDay { get; set; }
 
-        [Column("Seat_number")]
+        [Column("seat_number")]
         public int? SeatNumber { get; set; }
 
         [MaxLength(500)]
-        [Column("Vehicle_image")]
+        [Column("vehicle_image")]
         public string? VehicleImage { get; set; }
 
-        [Column("Battery", TypeName = "decimal(5,2)")]
+        [Column("battery", TypeName = "decimal(5,2)")]
         public decimal? Battery { get; set; } // Dung lượng pin (kWh)
 
-        [Column("Range_km")]
+        [Column("range_km")]
         public int? RangeKm { get; set; } // Tầm hoạt động (km)
 
         // Navigation properties

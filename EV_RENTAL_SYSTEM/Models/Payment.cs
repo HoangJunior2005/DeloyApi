@@ -7,10 +7,10 @@ namespace EV_RENTAL_SYSTEM.Models
     public class Payment
     {
         [Key]
-        [Column("Payment_Id")]
+        [Column("payment_id")]
         public int PaymentId { get; set; }
 
-        [Column("Payment_date")]
+        [Column("payment_date")]
         public DateTime PaymentDate { get; set; } = DateTime.Now;
 
         [Column(TypeName = "decimal(10,2)")]
@@ -19,7 +19,7 @@ namespace EV_RENTAL_SYSTEM.Models
         [MaxLength(50)]
         public string? Status { get; set; }
 
-        [Column("Contract_Id")]
+        [Column("contract_id")]
         public int ContractId { get; set; }
 
         // Navigation properties

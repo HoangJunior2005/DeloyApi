@@ -8,24 +8,24 @@ namespace EV_RENTAL_SYSTEM.Models
     public class LicensePlate
     {
         [Key]
-        [Column("License_plate_Id")]
+        [Column("license_plate_id")]
         public int LicensePlateId { get; set; }
 
         [Required]
         [MaxLength(50)]
-        [Column("Plate_Number")]
+        [Column("plate_number")]
         public string PlateNumber { get; set; } = string.Empty;
 
         [MaxLength(50)]
         public string? Status { get; set; } // Trạng thái biển số (Available, Rented, Maintenance)
 
-        [Column("Vehicle_Id")]
+        [Column("vehicle_id")]
         public int VehicleId { get; set; }
 
-        [Column("Registration_date", TypeName = "date")]
+        [Column("registration_date", TypeName = "date")]
         public DateTime? RegistrationDate { get; set; }
 
-        [Column("Station_Id")]
+        [Column("station_id")]
         public int StationId { get; set; }
 
         // Navigation properties

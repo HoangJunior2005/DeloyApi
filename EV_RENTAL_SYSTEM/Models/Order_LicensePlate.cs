@@ -6,10 +6,10 @@ namespace EV_RENTAL_SYSTEM.Models
     [Table("Order_LicensePlate")]
     public class Order_LicensePlate
     {
-        [Column("Order_Id")]
+        [Column("order_id")]
         public int OrderId { get; set; }
 
-        [Column("License_plate_Id")]
+        [Column("license_plate_id")]
         public int LicensePlateId { get; set; }
 
         // Navigation properties

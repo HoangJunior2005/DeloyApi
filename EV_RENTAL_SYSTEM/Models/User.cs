@@ -7,12 +7,12 @@ namespace EV_RENTAL_SYSTEM.Models
     public class User
     {
         [Key]
-        [Column("User_Id")]
+        [Column("user_id")]
         public int UserId { get; set; }
 
         [Required]
         [MaxLength(255)]
-        [Column("Full_name")]
+        [Column("full_name")]
         public string FullName { get; set; } = string.Empty;
 
         [Required]
@@ -27,22 +27,22 @@ namespace EV_RENTAL_SYSTEM.Models
         [Required]
         [MaxLength(20)]
         [Phone(ErrorMessage = "Số điện thoại không hợp lệ")]
-        [Column("Phone_number")]
+        [Column("phone_number")]
         public string PhoneNumber { get; set; } = string.Empty;
 
         [Column(TypeName = "date")]
         public DateTime? Birthday { get; set; }
 
-        [Column("Created_at")]
+        [Column("created_at")]
         public DateTime CreatedAt { get; set; } = DateTime.Now;
 
         [MaxLength(50)]
         public string? Status { get; set; }
 
-        [Column("Role_Id")]
+        [Column("role_id")]
         public int RoleId { get; set; }
 
-        [Column("Station_Id")]
+        [Column("station_id")]
         public int? StationId { get; set; } // Trạm mà staff quản lý (chỉ dành cho Station Staff)
 
         [MaxLength(500)]

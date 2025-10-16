@@ -7,10 +7,10 @@ namespace EV_RENTAL_SYSTEM.Models
     public class Complaint
     {
         [Key]
-        [Column("Complaint_Id")]
+        [Column("complaint_id")]
         public int ComplaintId { get; set; }
 
-        [Column("Complaint_date")]
+        [Column("complaint_date")]
         public DateTime ComplaintDate { get; set; } = DateTime.Now;
 
         [MaxLength(255)]
@@ -19,10 +19,10 @@ namespace EV_RENTAL_SYSTEM.Models
         [MaxLength(50)]
         public string? Status { get; set; }
 
-        [Column("User_Id")]
+        [Column("user_id")]
         public int UserId { get; set; }
 
-        [Column("Order_Id")]
+        [Column("order_id")]
         public int OrderId { get; set; }
 
         // Navigation properties

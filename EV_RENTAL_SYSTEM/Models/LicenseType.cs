@@ -7,12 +7,12 @@ namespace EV_RENTAL_SYSTEM.Models
     public class LicenseType
     {
         [Key]
-        [Column("License_type_Id")]
+        [Column("license_type_id")]
         public string LicenseTypeId { get; set; } = string.Empty;
 
         [Required]
         [MaxLength(50)]
-        [Column("Type_name")]
+        [Column("type_name")]
         public string TypeName { get; set; } = string.Empty;
 
         [MaxLength(255)]
