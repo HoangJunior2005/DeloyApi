@@ -7,26 +7,26 @@ namespace EV_RENTAL_SYSTEM.Models
     public class License
     {
         [Key]
-        [Column("license_id")]
+        [Column("License_Id")]
         public int LicenseId { get; set; }
 
         [Required]
         [MaxLength(50)]
-        [Column("license_number")]
+        [Column("License_number")]
         public string LicenseNumber { get; set; } = string.Empty;
 
         [Required]
-        [Column("expiry_date", TypeName = "date")]
+        [Column("Expiry_date", TypeName = "date")]
         public DateTime ExpiryDate { get; set; }
 
-        [Column("user_id")]
+        [Column("User_Id")]
         public int UserId { get; set; }
 
-        [Column("license_type_id")]
+        [Column("License_type_Id")]
         public string LicenseTypeId { get; set; } = string.Empty;
 
         [MaxLength(255)]
-        [Column("license_image_url")]
+        [Column("License_ImageUrl")]
         public string? LicenseImageUrl { get; set; }
 
         // Navigation properties

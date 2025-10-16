@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace EV_RENTAL_SYSTEM.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251016192841_FixPostgreSQLColumnNames")]
-    partial class FixPostgreSQLColumnNames
+    [Migration("20251016193932_FixConstraintNames")]
+    partial class FixConstraintNames
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -30,7 +30,7 @@ namespace EV_RENTAL_SYSTEM.Migrations
                     b.Property<int>("BrandId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
-                        .HasColumnName("brand_id");
+                        .HasColumnName("Brand_Id");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("BrandId"));
 
@@ -38,7 +38,7 @@ namespace EV_RENTAL_SYSTEM.Migrations
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)")
-                        .HasColumnName("brand_name");
+                        .HasColumnName("Brand_name");
 
                     b.HasKey("BrandId");
 
@@ -50,13 +50,13 @@ namespace EV_RENTAL_SYSTEM.Migrations
                     b.Property<int>("ComplaintId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
-                        .HasColumnName("complaint_id");
+                        .HasColumnName("Complaint_Id");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("ComplaintId"));
 
                     b.Property<DateTime>("ComplaintDate")
                         .HasColumnType("timestamp with time zone")
-                        .HasColumnName("complaint_date");
+                        .HasColumnName("Complaint_date");
 
                     b.Property<string>("Description")
                         .HasMaxLength(255)
@@ -64,7 +64,7 @@ namespace EV_RENTAL_SYSTEM.Migrations
 
                     b.Property<int>("OrderId")
                         .HasColumnType("integer")
-                        .HasColumnName("order_id");
+                        .HasColumnName("Order_Id");
 
                     b.Property<string>("Status")
                         .HasMaxLength(50)
@@ -72,7 +72,7 @@ namespace EV_RENTAL_SYSTEM.Migrations
 
                     b.Property<int>("UserId")
                         .HasColumnType("integer")
-                        .HasColumnName("user_id");
+                        .HasColumnName("User_Id");
 
                     b.HasKey("ComplaintId");
 
@@ -88,33 +88,33 @@ namespace EV_RENTAL_SYSTEM.Migrations
                     b.Property<int>("ContractId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
-                        .HasColumnName("contract_id");
+                        .HasColumnName("Contract_Id");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("ContractId"));
 
                     b.Property<string>("ContractCode")
                         .HasMaxLength(50)
                         .HasColumnType("character varying(50)")
-                        .HasColumnName("contract_code");
+                        .HasColumnName("Contract_Code");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("timestamp with time zone")
-                        .HasColumnName("created_date");
+                        .HasColumnName("Created_date");
 
                     b.Property<decimal?>("Deposit")
                         .HasColumnType("decimal(10,2)");
 
                     b.Property<decimal?>("ExtraFee")
                         .HasColumnType("decimal(10,2)")
-                        .HasColumnName("extra_fee");
+                        .HasColumnName("Extra_fee");
 
                     b.Property<int>("OrderId")
                         .HasColumnType("integer")
-                        .HasColumnName("order_id");
+                        .HasColumnName("Order_Id");
 
                     b.Property<decimal?>("RentalFee")
                         .HasColumnType("decimal(10,2)")
-                        .HasColumnName("rental_fee");
+                        .HasColumnName("Rental_fee");
 
                     b.HasKey("ContractId");
 
@@ -128,13 +128,13 @@ namespace EV_RENTAL_SYSTEM.Migrations
                     b.Property<int>("ContractProcessingId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
-                        .HasColumnName("contract_processing_id");
+                        .HasColumnName("ContractProcessing_Id");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("ContractProcessingId"));
 
                     b.Property<int>("ContractId")
                         .HasColumnType("integer")
-                        .HasColumnName("contract_id");
+                        .HasColumnName("Contract_Id");
 
                     b.Property<string>("Status")
                         .HasMaxLength(50)
@@ -142,7 +142,7 @@ namespace EV_RENTAL_SYSTEM.Migrations
 
                     b.Property<int>("StepId")
                         .HasColumnType("integer")
-                        .HasColumnName("step_id");
+                        .HasColumnName("Step_Id");
 
                     b.HasKey("ContractProcessingId");
 
@@ -158,33 +158,33 @@ namespace EV_RENTAL_SYSTEM.Migrations
                     b.Property<int>("LicenseId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
-                        .HasColumnName("license_id");
+                        .HasColumnName("License_Id");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("LicenseId"));
 
                     b.Property<DateTime>("ExpiryDate")
                         .HasColumnType("date")
-                        .HasColumnName("expiry_date");
+                        .HasColumnName("Expiry_date");
 
                     b.Property<string>("LicenseImageUrl")
                         .HasMaxLength(255)
                         .HasColumnType("character varying(255)")
-                        .HasColumnName("license_image_url");
+                        .HasColumnName("License_ImageUrl");
 
                     b.Property<string>("LicenseNumber")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("character varying(50)")
-                        .HasColumnName("license_number");
+                        .HasColumnName("License_number");
 
                     b.Property<string>("LicenseTypeId")
                         .IsRequired()
                         .HasColumnType("text")
-                        .HasColumnName("license_type_id");
+                        .HasColumnName("License_type_Id");
 
                     b.Property<int>("UserId")
                         .HasColumnType("integer")
-                        .HasColumnName("user_id");
+                        .HasColumnName("User_Id");
 
                     b.HasKey("LicenseId");
 
@@ -203,7 +203,7 @@ namespace EV_RENTAL_SYSTEM.Migrations
                     b.Property<int>("LicensePlateId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
-                        .HasColumnName("license_plate_id");
+                        .HasColumnName("License_plate_Id");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("LicensePlateId"));
 
@@ -211,15 +211,15 @@ namespace EV_RENTAL_SYSTEM.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("character varying(50)")
-                        .HasColumnName("plate_number");
+                        .HasColumnName("Plate_Number");
 
                     b.Property<DateTime?>("RegistrationDate")
                         .HasColumnType("date")
-                        .HasColumnName("registration_date");
+                        .HasColumnName("Registration_date");
 
                     b.Property<int>("StationId")
                         .HasColumnType("integer")
-                        .HasColumnName("station_id");
+                        .HasColumnName("Station_Id");
 
                     b.Property<string>("Status")
                         .HasMaxLength(50)
@@ -227,7 +227,7 @@ namespace EV_RENTAL_SYSTEM.Migrations
 
                     b.Property<int>("VehicleId")
                         .HasColumnType("integer")
-                        .HasColumnName("vehicle_id");
+                        .HasColumnName("Vehicle_Id");
 
                     b.HasKey("LicensePlateId");
 
@@ -242,7 +242,7 @@ namespace EV_RENTAL_SYSTEM.Migrations
                 {
                     b.Property<string>("LicenseTypeId")
                         .HasColumnType("text")
-                        .HasColumnName("license_type_id");
+                        .HasColumnName("License_type_Id");
 
                     b.Property<string>("Description")
                         .HasMaxLength(255)
@@ -252,7 +252,7 @@ namespace EV_RENTAL_SYSTEM.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("character varying(50)")
-                        .HasColumnName("type_name");
+                        .HasColumnName("Type_name");
 
                     b.HasKey("LicenseTypeId");
 
@@ -296,7 +296,7 @@ namespace EV_RENTAL_SYSTEM.Migrations
                     b.Property<int>("MaintenanceId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
-                        .HasColumnName("maintenance_id");
+                        .HasColumnName("Maintenance_Id");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("MaintenanceId"));
 
@@ -309,11 +309,11 @@ namespace EV_RENTAL_SYSTEM.Migrations
 
                     b.Property<int>("LicensePlateId")
                         .HasColumnType("integer")
-                        .HasColumnName("license_plate_id");
+                        .HasColumnName("License_plate_Id");
 
                     b.Property<DateTime?>("MaintenanceDate")
                         .HasColumnType("date")
-                        .HasColumnName("maintenance_date");
+                        .HasColumnName("Maintenance_date");
 
                     b.Property<string>("Status")
                         .HasMaxLength(50)
@@ -331,34 +331,34 @@ namespace EV_RENTAL_SYSTEM.Migrations
                     b.Property<int>("OrderId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
-                        .HasColumnName("order_id");
+                        .HasColumnName("Order_Id");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("OrderId"));
 
                     b.Property<DateTime?>("EndTime")
                         .HasColumnType("timestamp with time zone")
-                        .HasColumnName("end_time");
+                        .HasColumnName("End_time");
 
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("timestamp with time zone")
-                        .HasColumnName("order_date");
+                        .HasColumnName("Order_date");
 
                     b.Property<DateTime?>("StartTime")
                         .HasColumnType("timestamp with time zone")
-                        .HasColumnName("start_time");
+                        .HasColumnName("Start_time");
 
                     b.Property<string>("Status")
                         .HasMaxLength(50)
                         .HasColumnType("character varying(50)")
-                        .HasColumnName("status");
+                        .HasColumnName("Status");
 
                     b.Property<decimal?>("TotalAmount")
                         .HasColumnType("decimal(10,2)")
-                        .HasColumnName("total_amount");
+                        .HasColumnName("Total_amount");
 
                     b.Property<int>("UserId")
                         .HasColumnType("integer")
-                        .HasColumnName("user_id");
+                        .HasColumnName("User_Id");
 
                     b.HasKey("OrderId");
 
@@ -371,11 +371,11 @@ namespace EV_RENTAL_SYSTEM.Migrations
                 {
                     b.Property<int>("OrderId")
                         .HasColumnType("integer")
-                        .HasColumnName("order_id");
+                        .HasColumnName("Order_Id");
 
                     b.Property<int>("LicensePlateId")
                         .HasColumnType("integer")
-                        .HasColumnName("license_plate_id");
+                        .HasColumnName("License_plate_Id");
 
                     b.HasKey("OrderId", "LicensePlateId");
 
@@ -389,7 +389,7 @@ namespace EV_RENTAL_SYSTEM.Migrations
                     b.Property<int>("PaymentId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
-                        .HasColumnName("payment_id");
+                        .HasColumnName("Payment_Id");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("PaymentId"));
 
@@ -398,11 +398,11 @@ namespace EV_RENTAL_SYSTEM.Migrations
 
                     b.Property<int>("ContractId")
                         .HasColumnType("integer")
-                        .HasColumnName("contract_id");
+                        .HasColumnName("Contract_Id");
 
                     b.Property<DateTime>("PaymentDate")
                         .HasColumnType("timestamp with time zone")
-                        .HasColumnName("payment_date");
+                        .HasColumnName("Payment_date");
 
                     b.Property<string>("Status")
                         .HasMaxLength(50)
@@ -420,14 +420,14 @@ namespace EV_RENTAL_SYSTEM.Migrations
                     b.Property<int>("StepId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
-                        .HasColumnName("step_id");
+                        .HasColumnName("Step_Id");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("StepId"));
 
                     b.Property<string>("StepName")
                         .HasMaxLength(50)
                         .HasColumnType("character varying(50)")
-                        .HasColumnName("step_name");
+                        .HasColumnName("Step_name");
 
                     b.Property<string>("Terms")
                         .HasMaxLength(255)
@@ -443,7 +443,7 @@ namespace EV_RENTAL_SYSTEM.Migrations
                     b.Property<int>("RoleId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
-                        .HasColumnName("role_id");
+                        .HasColumnName("Role_Id");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("RoleId"));
 
@@ -455,7 +455,7 @@ namespace EV_RENTAL_SYSTEM.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("character varying(50)")
-                        .HasColumnName("role_name");
+                        .HasColumnName("Role_name");
 
                     b.HasKey("RoleId");
 
@@ -487,13 +487,13 @@ namespace EV_RENTAL_SYSTEM.Migrations
                     b.Property<int>("StationId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
-                        .HasColumnName("station_id");
+                        .HasColumnName("Station_Id");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("StationId"));
 
                     b.Property<int>("AvailableVehicle")
                         .HasColumnType("integer")
-                        .HasColumnName("available_vehicle");
+                        .HasColumnName("Available_Vehicle");
 
                     b.Property<string>("Country")
                         .HasMaxLength(50)
@@ -510,7 +510,7 @@ namespace EV_RENTAL_SYSTEM.Migrations
                     b.Property<string>("StationName")
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)")
-                        .HasColumnName("station_name");
+                        .HasColumnName("Station_name");
 
                     b.Property<string>("Street")
                         .HasMaxLength(100)
@@ -518,7 +518,7 @@ namespace EV_RENTAL_SYSTEM.Migrations
 
                     b.Property<int>("TotalVehicle")
                         .HasColumnType("integer")
-                        .HasColumnName("total_vehicle");
+                        .HasColumnName("Total_Vehicle");
 
                     b.HasKey("StationId");
 
@@ -530,7 +530,7 @@ namespace EV_RENTAL_SYSTEM.Migrations
                     b.Property<int>("TransactionId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
-                        .HasColumnName("transaction_id");
+                        .HasColumnName("Transaction_Id");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("TransactionId"));
 
@@ -539,15 +539,15 @@ namespace EV_RENTAL_SYSTEM.Migrations
 
                     b.Property<int>("PaymentId")
                         .HasColumnType("integer")
-                        .HasColumnName("payment_id");
+                        .HasColumnName("Payment_Id");
 
                     b.Property<DateTime>("TransactionDate")
                         .HasColumnType("timestamp with time zone")
-                        .HasColumnName("transaction_date");
+                        .HasColumnName("Transaction_date");
 
                     b.Property<int>("UserId")
                         .HasColumnType("integer")
-                        .HasColumnName("user_id");
+                        .HasColumnName("User_Id");
 
                     b.HasKey("TransactionId");
 
@@ -563,7 +563,7 @@ namespace EV_RENTAL_SYSTEM.Migrations
                     b.Property<int>("UserId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
-                        .HasColumnName("user_id");
+                        .HasColumnName("User_Id");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("UserId"));
 
@@ -573,7 +573,7 @@ namespace EV_RENTAL_SYSTEM.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("timestamp with time zone")
-                        .HasColumnName("created_at")
+                        .HasColumnName("Created_at")
                         .HasDefaultValueSql("GETDATE()");
 
                     b.Property<string>("Email")
@@ -585,7 +585,7 @@ namespace EV_RENTAL_SYSTEM.Migrations
                         .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("character varying(255)")
-                        .HasColumnName("full_name");
+                        .HasColumnName("Full_name");
 
                     b.Property<string>("Notes")
                         .HasMaxLength(500)
@@ -600,15 +600,15 @@ namespace EV_RENTAL_SYSTEM.Migrations
                         .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("character varying(20)")
-                        .HasColumnName("phone_number");
+                        .HasColumnName("Phone_number");
 
                     b.Property<int>("RoleId")
                         .HasColumnType("integer")
-                        .HasColumnName("role_id");
+                        .HasColumnName("Role_Id");
 
                     b.Property<int?>("StationId")
                         .HasColumnType("integer")
-                        .HasColumnName("station_id");
+                        .HasColumnName("Station_Id");
 
                     b.Property<string>("Status")
                         .HasMaxLength(50)
@@ -631,17 +631,17 @@ namespace EV_RENTAL_SYSTEM.Migrations
                     b.Property<int>("VehicleId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
-                        .HasColumnName("vehicle_id");
+                        .HasColumnName("Vehicle_Id");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("VehicleId"));
 
                     b.Property<decimal?>("Battery")
                         .HasColumnType("decimal(5,2)")
-                        .HasColumnName("battery");
+                        .HasColumnName("Battery");
 
                     b.Property<int>("BrandId")
                         .HasColumnType("integer")
-                        .HasColumnName("brand_id");
+                        .HasColumnName("Brand_Id");
 
                     b.Property<string>("Description")
                         .HasMaxLength(255)
@@ -654,24 +654,24 @@ namespace EV_RENTAL_SYSTEM.Migrations
 
                     b.Property<int?>("ModelYear")
                         .HasColumnType("integer")
-                        .HasColumnName("model_year");
+                        .HasColumnName("Model_year");
 
                     b.Property<decimal?>("PricePerDay")
                         .HasColumnType("decimal(10,2)")
-                        .HasColumnName("price_per_day");
+                        .HasColumnName("Price_per_day");
 
                     b.Property<int?>("RangeKm")
                         .HasColumnType("integer")
-                        .HasColumnName("range_km");
+                        .HasColumnName("Range_km");
 
                     b.Property<int?>("SeatNumber")
                         .HasColumnType("integer")
-                        .HasColumnName("seat_number");
+                        .HasColumnName("Seat_number");
 
                     b.Property<string>("VehicleImage")
                         .HasMaxLength(500)
                         .HasColumnType("character varying(500)")
-                        .HasColumnName("vehicle_image");
+                        .HasColumnName("Vehicle_image");
 
                     b.HasKey("VehicleId");
 

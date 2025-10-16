@@ -7,13 +7,13 @@ namespace EV_RENTAL_SYSTEM.Models
     public class ContractProcessing
     {
         [Key]
-        [Column("contract_processing_id")]
+        [Column("ContractProcessing_Id")]
         public int ContractProcessingId { get; set; }
 
-        [Column("contract_id")]
+        [Column("Contract_Id")]
         public int ContractId { get; set; }
 
-        [Column("step_id")]
+        [Column("Step_Id")]
         public int StepId { get; set; }
 
         [MaxLength(50)]

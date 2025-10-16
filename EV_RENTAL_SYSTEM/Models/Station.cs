@@ -7,11 +7,11 @@ namespace EV_RENTAL_SYSTEM.Models
     public class Station
     {
         [Key]
-        [Column("station_id")]
+        [Column("Station_Id")]
         public int StationId { get; set; }
 
         [MaxLength(100)]
-        [Column("station_name")]
+        [Column("Station_name")]
         public string? StationName { get; set; }
 
         [MaxLength(100)]
@@ -26,10 +26,10 @@ namespace EV_RENTAL_SYSTEM.Models
         [MaxLength(50)]
         public string? Country { get; set; }
 
-        [Column("total_vehicle")]
+        [Column("Total_Vehicle")]
         public int TotalVehicle { get; set; }
 
-        [Column("available_vehicle")]
+        [Column("Available_Vehicle")]
         public int AvailableVehicle { get; set; }
 
         // Navigation properties

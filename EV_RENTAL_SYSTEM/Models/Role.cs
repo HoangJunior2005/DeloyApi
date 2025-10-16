@@ -7,12 +7,12 @@ namespace EV_RENTAL_SYSTEM.Models
     public class Role
     {
         [Key]
-        [Column("role_id")]
+        [Column("Role_Id")]
         public int RoleId { get; set; }
 
         [Required]
         [MaxLength(50)]
-        [Column("role_name")]
+        [Column("Role_name")]
         public string RoleName { get; set; } = string.Empty;
 
         [MaxLength(255)]

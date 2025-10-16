@@ -7,12 +7,12 @@ namespace EV_RENTAL_SYSTEM.Models
     public class Brand
     {
         [Key]
-        [Column("brand_id")]
+        [Column("Brand_Id")]
         public int BrandId { get; set; }
 
         [Required]
         [MaxLength(100)]
-        [Column("brand_name")]
+        [Column("Brand_name")]
         public string BrandName { get; set; } = string.Empty;
 
         // Navigation properties

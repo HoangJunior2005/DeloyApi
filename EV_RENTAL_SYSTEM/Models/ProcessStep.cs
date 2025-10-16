@@ -7,11 +7,11 @@ namespace EV_RENTAL_SYSTEM.Models
     public class ProcessStep
     {
         [Key]
-        [Column("step_id")]
+        [Column("Step_Id")]
         public int StepId { get; set; }
 
         [MaxLength(50)]
-        [Column("step_name")]
+        [Column("Step_name")]
         public string? StepName { get; set; }
 
         [MaxLength(255)]

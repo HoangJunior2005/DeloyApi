@@ -7,17 +7,17 @@ namespace EV_RENTAL_SYSTEM.Models
     public class Contract
     {
         [Key]
-        [Column("contract_id")]
+        [Column("Contract_Id")]
         public int ContractId { get; set; }
 
-        [Column("order_id")]
+        [Column("Order_Id")]
         public int OrderId { get; set; }
 
         [MaxLength(50)]
-        [Column("contract_code")]
+        [Column("Contract_Code")]
         public string? ContractCode { get; set; }
 
-        [Column("created_date")]
+        [Column("Created_date")]
         public DateTime CreatedDate { get; set; } = DateTime.Now;
 
         [NotMapped]
@@ -26,10 +26,10 @@ namespace EV_RENTAL_SYSTEM.Models
         [Column(TypeName = "decimal(10,2)")]
         public decimal? Deposit { get; set; }
 
-        [Column("rental_fee", TypeName = "decimal(10,2)")]
+        [Column("Rental_fee", TypeName = "decimal(10,2)")]
         public decimal? RentalFee { get; set; }
 
-        [Column("extra_fee", TypeName = "decimal(10,2)")]
+        [Column("Extra_fee", TypeName = "decimal(10,2)")]
         public decimal? ExtraFee { get; set; }
 
         // Navigation properties

@@ -7,7 +7,7 @@ namespace EV_RENTAL_SYSTEM.Models
     public class Maintenance
     {
         [Key]
-        [Column("maintenance_id")]
+        [Column("Maintenance_Id")]
         public int MaintenanceId { get; set; }
 
         [MaxLength(255)]
@@ -16,13 +16,13 @@ namespace EV_RENTAL_SYSTEM.Models
         [Column(TypeName = "decimal(10,2)")]
         public decimal? Cost { get; set; }
 
-        [Column("maintenance_date", TypeName = "date")]
+        [Column("Maintenance_date", TypeName = "date")]
         public DateTime? MaintenanceDate { get; set; }
 
         [MaxLength(50)]
         public string? Status { get; set; }
 
-        [Column("license_plate_id")]
+        [Column("License_plate_Id")]
         public int LicensePlateId { get; set; }
 
         // Navigation properties

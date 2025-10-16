@@ -7,19 +7,19 @@ namespace EV_RENTAL_SYSTEM.Models
     public class Transaction
     {
         [Key]
-        [Column("transaction_id")]
+        [Column("Transaction_Id")]
         public int TransactionId { get; set; }
 
         [Column(TypeName = "decimal(10,2)")]
         public decimal? Amount { get; set; }
 
-        [Column("transaction_date")]
+        [Column("Transaction_date")]
         public DateTime TransactionDate { get; set; } = DateTime.Now;
 
-        [Column("payment_id")]
+        [Column("Payment_Id")]
         public int PaymentId { get; set; }
 
-        [Column("user_id")]
+        [Column("User_Id")]
         public int UserId { get; set; }
 
         // Navigation properties
