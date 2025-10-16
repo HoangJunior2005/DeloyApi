@@ -11,79 +11,79 @@ namespace EV_RENTAL_SYSTEM.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_Complaint_Order_order_id",
+                name: "FK_Complaint_Order_Order_Id",
                 table: "Complaint");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_Complaint_User_user_id",
+                name: "FK_Complaint_User_User_Id",
                 table: "Complaint");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_Contract_Order_order_id",
+                name: "FK_Contract_Order_Order_Id",
                 table: "Contract");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_ContractProcessing_Contract_contract_id",
+                name: "FK_ContractProcessing_Contract_Contract_Id",
                 table: "ContractProcessing");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_ContractProcessing_ProcessStep_step_id",
+                name: "FK_ContractProcessing_ProcessStep_Step_Id",
                 table: "ContractProcessing");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_License_LicenseType_LicenseTypeId",
+                name: "FK_License_LicenseType_License_type_Id",
                 table: "License");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_License_User_user_id",
+                name: "FK_License_User_User_Id",
                 table: "License");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_LicensePlate_Station_station_id",
+                name: "FK_LicensePlate_Station_Station_Id",
                 table: "LicensePlate");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_LicensePlate_Vehicle_vehicle_id",
+                name: "FK_LicensePlate_Vehicle_Vehicle_Id",
                 table: "LicensePlate");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_Maintenance_LicensePlate_license_plate_id",
+                name: "FK_Maintenance_LicensePlate_License_plate_Id",
                 table: "Maintenance");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_Order_User_user_id",
+                name: "FK_Order_User_User_Id",
                 table: "Order");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_Order_LicensePlate_LicensePlate_license_plate_id",
+                name: "FK_Order_LicensePlate_LicensePlate_License_plate_Id",
                 table: "Order_LicensePlate");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_Order_LicensePlate_Order_order_id",
+                name: "FK_Order_LicensePlate_Order_Order_Id",
                 table: "Order_LicensePlate");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_Payment_Contract_contract_id",
+                name: "FK_Payment_Contract_Contract_Id",
                 table: "Payment");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_Transaction_Payment_payment_id",
+                name: "FK_Transaction_Payment_Payment_Id",
                 table: "Transaction");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_Transaction_User_user_id",
+                name: "FK_Transaction_User_User_Id",
                 table: "Transaction");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_User_Role_role_id",
+                name: "FK_User_Role_Role_Id",
                 table: "User");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_User_Station_station_id",
+                name: "FK_User_Station_Station_Id",
                 table: "User");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_Vehicle_Brand_brand_id",
+                name: "FK_Vehicle_Brand_Brand_Id",
                 table: "Vehicle");
 
             migrationBuilder.RenameColumn(
