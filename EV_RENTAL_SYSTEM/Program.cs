@@ -18,6 +18,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+// Configure Npgsql for DateTime handling
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+
 // Database
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));

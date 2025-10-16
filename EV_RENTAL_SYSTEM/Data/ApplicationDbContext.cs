@@ -51,6 +51,18 @@ namespace EV_RENTAL_SYSTEM.Data
         {
             base.OnModelCreating(modelBuilder);
 
+            // Configure DateTime for PostgreSQL
+            foreach (var entityType in modelBuilder.Model.GetEntityTypes())
+            {
+                foreach (var property in entityType.GetProperties())
+                {
+                    if (property.ClrType == typeof(DateTime) || property.ClrType == typeof(DateTime?))
+                    {
+                        property.SetColumnType("timestamp with time zone");
+                    }
+                }
+            }
+
             // Configure User entity
             modelBuilder.Entity<User>(entity =>
             {
