@@ -31,7 +31,7 @@ namespace EV_RENTAL_SYSTEM.Migrations
                 table: "ContractProcessing");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_License_LicenseType_License_type_Id",
+                name: "FK_License_LicenseType_LicenseTypeId",
                 table: "License");
 
             migrationBuilder.DropForeignKey(
@@ -567,7 +567,7 @@ namespace EV_RENTAL_SYSTEM.Migrations
                 onDelete: ReferentialAction.Restrict);
 
             migrationBuilder.AddForeignKey(
-                name: "FK_License_LicenseType_License_type_Id",
+                name: "FK_License_LicenseType_LicenseTypeId",
                 table: "License",
                 column: "License_type_Id",
                 principalTable: "LicenseType",
@@ -702,7 +702,7 @@ namespace EV_RENTAL_SYSTEM.Migrations
                 table: "ContractProcessing");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_License_LicenseType_License_type_Id",
+                name: "FK_License_LicenseType_LicenseTypeId",
                 table: "License");
 
             migrationBuilder.DropForeignKey(
